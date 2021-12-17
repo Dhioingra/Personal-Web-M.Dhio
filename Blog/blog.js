@@ -8,9 +8,14 @@ function addContent (i){
     let author = document.getElementById("input-blog-author").value
     let image = document.getElementById("input-blog-image").files
 
+    if (image.files === undefined){
+        alert ("All data needed!!")
+        return false
+    }
+
     image = URL.createObjectURL(image[0])
 
-    // console.log (image)
+
 
     let blog ={
         title : title,
@@ -20,18 +25,13 @@ function addContent (i){
         postAt : new Date (),
     }
 
-    blogs.push(blog)
 
-console.log(blog.postAt)
-
-    console.log(blogs)
-    // alert ('ini adalah alert addContent')
-    // console.log (blogs)
-
-    for(let i = 0; i < blogs.length; i++) {
-        console.log(`Index ${i}, Autor : ${author}, Title : ${title}, Content : ${content}`)
+    if (blog.author === "" || blog.title === "" || blog.content === ""){
+        alert ("All data needed!!")
+        return false
     }
 
+    blogs.push(blog)
     manipulationHTML()
 
 }
