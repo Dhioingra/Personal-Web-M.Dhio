@@ -5,6 +5,7 @@ function addContent (i){
 
     let title = document.getElementById("input-blog-title").value
     let content = document.getElementById("input-blog-content").value
+    let author = document.getElementById("input-blog-author").value
     let image = document.getElementById("input-blog-image").files
 
     image = URL.createObjectURL(image[0])
@@ -15,7 +16,7 @@ function addContent (i){
         title : title,
         content : content,
         image : image,
-        author : "Muh. Dhio Ingra Fernanda",
+        author : author,
         postAt : new Date (),
     }
 
@@ -28,7 +29,7 @@ console.log(blog.postAt)
     // console.log (blogs)
 
     for(let i = 0; i < blogs.length; i++) {
-        console.log(`Index ${i}, Title : ${title}, Content : ${content}`)
+        console.log(`Index ${i}, Autor : ${author}, Title : ${title}, Content : ${content}`)
     }
 
     manipulationHTML()

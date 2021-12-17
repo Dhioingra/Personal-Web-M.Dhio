@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Contact Form</title>
+    <script src="../Card/script.js"></script>
+</head>
+<body>
+
+    <!----- Navbar ----->
+    <nav>
+        <ul>
+            <li><a class="not_logo" href="../Card/index.html" style="padding: 5px"><img class="gambar" src="konoha.png" alt="" style="width: 50px; height: auto;"></a></li>
+            <li><a href="../Card/index.html" style="margin-left:20px;">Home</a></li>
+            <li><a href="../Blog/blog.html">Blog</a></li>
+            <li style="float:right; margin-right: 50px;"><a href="form.html">Contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!----- Content ----->
+    <div class="container">
+        <form action="">
+            <div class="input_item">
+                <label for="name">Name</label>
+                <br>
+                <input type="text" id="name">
+            </div>
+        <br>
+            <div class="input_item">
+                <label for="">Email</label>
+                <br>
+                <input type="email" id="email">
+            </div>
+        <br>
+            <div class="input_item">
+                <label for="">Phone Number</label>
+                <br>
+                <input type="number" id="phone">
+            </div>
+        <br>
+            <div class="input_item">
+                <label for="">Subject</label>
+                <br>
+                <select name="" id="subject">
+                    <option value="Privacy police">Privacy police</option>
+                    <option value="Problem With Our Site">Problem With Our Site</option>
+                    <option value="Questions on Order">Questions on Order</option>
+                    <option value="Other Questions">Other Questions</option>
+                </select>
+            </div>
+        <br>
+            <div class="input_radio">
+                <label for="gender">Gender</label>
+            <div class="button">
+                <label for="Male"><input type="radio" id="Male" name="gender" value="Male">Male</label>
+                <label for="Female"><input type="radio" id="Female" name="gender" value="Female">Female</label>
+            </div>
+            </div>
+        <br>
+            <div class="input_item">
+                <label for="">Your Message</label>
+                <br>
+                <textarea name="" id="message" cols="30" rows="10"></textarea>
+            </div>
+        <br>
+            <div>
+                <button type="button" onclick="submitData()"> <img src="https://pic.onlinewebfonts.com/svg/img_183020.png" style="width:10px;"> Submit</button>
+            </div>
+        </form>
+    </div>
+    
+    
+</body>
+</html>
