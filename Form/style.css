@@ -32,7 +32,7 @@ li a:hover:not(.not_logo){
     background-color: rgb(138, 78, 78);
 }
 
-/*----- content ------*/
+/*----- Content ------*/
 .container {
     box-shadow: 0 4px 8px 0 rgba(70, 39, 39, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 350px;

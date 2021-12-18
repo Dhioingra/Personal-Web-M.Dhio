@@ -1,3 +1,4 @@
+//-------- Get Value Submit Data --------//
 function submitData () {
     let name = document.getElementById("name").value
     let email = document.getElementById("email").value
@@ -12,12 +13,11 @@ function submitData () {
         else{
             gender = null;
         }
-    if (name, email, phone, message === "" || gender === null){
-        alert ("Semua form wajib diisi!")
+
+    if (name === "" || email === "" || phone === "" || message === "" || gender === null){
+        alert ("All Data Needed!")
         return false;
     }
-
-    console.log (name, email, phone, subject,gender, message)
 
     let emailReceiver ="Kiki@gmail.com"
     let link = document.createElement ('a')
@@ -33,9 +33,6 @@ function submitData () {
         message: message,
         gender: gender,
     }
-
-    console.log (objectData)
-
 }
 
 

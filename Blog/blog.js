@@ -1,5 +1,6 @@
 let blogs = []
- 
+
+//-------- Add Blog --------// 
 function addContent (i){
     i.preventDefault();
 
@@ -8,14 +9,10 @@ function addContent (i){
     let author = document.getElementById("input-blog-author").value
     let image = document.getElementById("input-blog-image").files
 
-    if (image.files === undefined){
+    if (image[0] === undefined || author === "" || title === "" || content === ""){
         alert ("All data needed!!")
         return false
-    }
-
-    image = URL.createObjectURL(image[0])
-
-
+    }else{image = URL.createObjectURL(image[0])}
 
     let blog ={
         title : title,
@@ -24,18 +21,11 @@ function addContent (i){
         author : author,
         postAt : new Date (),
     }
-
-
-    if (blog.author === "" || blog.title === "" || blog.content === ""){
-        alert ("All data needed!!")
-        return false
-    }
-
     blogs.push(blog)
     manipulationHTML()
-
 }
 
+//-------- Render HTML --------//
 function manipulationHTML () {
     let contentContainer = document.getElementById("contents");
 
@@ -68,13 +58,13 @@ function manipulationHTML () {
     }
 }
 
-let month = ["January","February","March","April","May","June","July","August","September","October","November","December"]
-
+//-------- Upload's Time --------//
 function getFullTime (time){
+    let month = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+
     let date = time.getDate()
     let monthIndex = time.getMonth()
     let year = time.getFullYear()
-
     let hours = time.getHours()
     let minute = time.getMinutes()
 
@@ -82,6 +72,7 @@ function getFullTime (time){
     return result
 }
 
+//-------- Distance Upload's Time --------//
 function getDistanceTime (time){
     let timePost = time
     let timeNow = new Date ()
@@ -113,7 +104,6 @@ function getDistanceTime (time){
     
     }
 }
-
 setInterval(()=>{
     manipulationHTML()
 },3000)
